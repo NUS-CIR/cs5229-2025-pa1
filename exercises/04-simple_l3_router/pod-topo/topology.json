@@ -1,0 +1,18 @@
+{
+    "hosts": {
+        "h1": {"ip": "10.0.0.1/24", "mac": "08:01:00:00:01:11",
+               "commands":["route add default gw 10.0.0.254 dev eth0"]},
+        "h2": {"ip": "192.168.1.1/24", "mac": "08:02:00:00:01:11",
+               "commands":["route add default gw 192.168.1.254 dev eth0"]},
+        "h3": {"ip": "172.16.0.1/24", "mac": "08:03:00:00:01:11",
+               "commands":["route add default gw 172.16.0.254 dev eth0"]}
+    },
+    "switches": {
+        "s1": { "runtime_json" : "" }
+    },
+    "links": [
+        ["h1", "s1-p1"],
+        ["h2", "s1-p2"],
+        ["h3", "s1-p3"]
+    ]
+}
