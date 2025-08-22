@@ -120,6 +120,13 @@ void initialize_dead_drop_boxes()
     }
     dead_drop_box_checksum = malloc(sizeof(uint32_t) * DEAD_DROP_BOX_SIZE);
     memset(dead_drop_box_checksum, 0, sizeof(uint32_t) * DEAD_DROP_BOX_SIZE);
+
+    // initialize all entries with 0xdeadbeef
+    uint32_t *data = (uint32_t *)dead_drop_box;
+    for (size_t i = 0; i < DEAD_DROP_BOX_SIZE; i++)
+    {
+        data[i] = 0xdeadbeef;
+    }
 }
 
 void dead_drop_main_loop(void)
