@@ -36,10 +36,11 @@ Below is the network topology used in this exercise:
 | h3   | c       | 172.16.0.1/24  | 08:03:00:00:01:11   | 172.16.0.254           |
 
 The router has three interfaces:
-- Interface a (88:01:00:00:01:11): connected to subnet a (10.0.0.0/24)
-- Interface b (88:02:00:00:01:11): connected to subnet b (192.168.1.0/24)
-- Interface c (88:03:00:00:01:11): connected to subnet c (172.16.0.0/24)
+- Interface a: connected to subnet a (10.0.0.0/24)
+- Interface b: connected to subnet b (192.168.1.0/24)
+- Interface c: connected to subnet c (172.16.0.0/24)
 
+All router interfaces have the MAC adddress 88:88:88:88:88:88.
 
 ### Requirements
 
