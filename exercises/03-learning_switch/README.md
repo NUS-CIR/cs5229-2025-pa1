@@ -8,7 +8,8 @@ The learning switch will learn the MAC addresses of connected hosts and forward 
 When the switch receives a packet, it will check if the source MAC address is already in its forwarding table. 
 If not, it will record the source MAC address along with the port it was received on. 
 For packets destined to a known MAC address, the switch will forward them to the corresponding port. 
-If the destination MAC address is unknown, it will flood the packet to all ports except the one it was received on.
+If the destination MAC address is unknown, it should drop the packet.
+Only flood packets when the destination MAC address is a broadcast address.
 
 ### Network Topology
 
