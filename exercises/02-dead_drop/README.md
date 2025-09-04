@@ -2,7 +2,7 @@
 
 ## Introduction
 The objective of this exercise is to implement a dead drop facility to enable secret message exchange through a DPDK software switch.
-The dead drop facility has two components: `dead_drop_box` and `dead_drop_box_checksum`, which can hold up to 1024 entries.
+The dead drop facility has two components: `dead_drop_box` and `dead_drop_box_checksum`, which can hold up to 65536 entries.
 
 When the switch receives a `DROPOFF` message, it will store the message in the designated `dead_drop_box` entry with corresponding `mailboxNum`.
 At the same time, the switch computes a CRC32 checksum for the message which will then be stored in corresponding `dead_drop_box_checksum` entry.
