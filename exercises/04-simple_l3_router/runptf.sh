@@ -81,3 +81,4 @@ set -x
 /bin/rm -rf ./ptf.log ./ptf.pcap
 
 sudo ./../../utils/veth_teardown.sh
+sudo python3 ../../utils/environment_cleanup.py

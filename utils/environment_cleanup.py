@@ -43,7 +43,9 @@ if __name__ == "__main__":
 
     if exercise_names:
         for name in exercise_names:
-            os.system(f"sudo pkill --signal SIGKILL -f {name}")
+            # list all processes and kill those matching the name
+            os.system(f"ps aux | grep ./build/{name} | awk '{{print $2}}' | xargs sudo kill -9 > /dev/null 2>&1")
+            os.system(f"ps aux | grep ./out/{name} | awk '{{print $2}}' | xargs sudo kill -9 > /dev/null 2>&1")
         print("All DPDK processes killed.")
     delete_ovs_bridges()
     print("All OVS bridges deleted.")
